@@ -41,9 +41,33 @@
 4. **Creating a Pull Request**: Once your changes are ready, create a pull request. Link the pull request to the issue it addresses.
 5. **Review and Merge**: Another contributor should review your pull request. Once approved, the pull request can be merged into the `main` branch.
 
+
 ## Continuous Integration
-- The project uses GitHub Actions for continuous integration.
-- The pipeline automatically compiles the project and executes tests on each push to the repository.
+
+This project uses GitHub Actions for continuous integration. 
+The CI pipeline is defined in the `.github/workflows/ci.yml` file.
+
+### Triggering a Build
+
+The CI pipeline is automatically triggered on the following events:
+- Push to the `main` branch
+- Pull request to the `main` branch
+
+### Steps in the Pipeline
+
+1. **Checkout repository**: Clones the repository.
+2. **Set up JDK 11**: Prepares the Java environment.
+3. **Build with Maven**: Compiles and packages the project.
+4. **Run tests**: Executes unit tests.
+5. **Static code analysis**: Checks code style and formatting.
+6. **Code coverage**: Generates a coverage report.
+7. **Package application**: Packages the application into a JAR file.
+8. **Deploy to server**: Deploys the application to a live environment.
+9. **Telemetry setup**: Sets up telemetry for monitoring.
+
+### Deployment
+
+To deploy the application, the CI pipeline automatically copies the JAR file to the server and runs it. Ensure the server details and paths are correctly configured in the workflow file.
 
 ## Contact
 For any questions or feedback, please open an issue in the repository or contact the project maintainers.
