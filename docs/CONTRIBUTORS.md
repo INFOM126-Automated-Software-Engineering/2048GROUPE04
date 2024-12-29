@@ -1,5 +1,14 @@
 # Contributor Guide
 
+## Table of Contents
+- Branch Management Policy
+- Commit Messages Conventions
+- Code Conventions
+- Release Policy
+- Managing Issues and Branches
+- Continuous Integration
+- Contact
+
 ## Branch Management Policy
 - **Branch Naming**: Branches should be named based on the issue they address. For example, `issue-#123-fix-bug` or `feature-add-new-game-mode`.
 - **Branch Placement**: All branches should be created from the `main` branch.
@@ -11,6 +20,10 @@
     - **Type**: `feat` (feature), `fix` (bug fix), `docs` (documentation), `style` (formatting), `refactor` (refactoring), `test` (adding tests), `chore` (maintenance).
     - **Scope**: The part of the codebase affected (optional).
     - **Description**: A brief summary of the changes.
+
+### Examples
+- `feat(game): add new game mode`
+- `fix(ui): resolve button alignment issue`
 
 ## Code Conventions
 - Follow the Java coding standards.
