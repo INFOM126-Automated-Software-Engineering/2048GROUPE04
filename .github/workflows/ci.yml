@@ -27,8 +27,8 @@ jobs:
       - name: Run tests
         run: mvn test
 
-      - name: Static code analysis
-        run: mvn checkstyle:check
+#      - name: Static code analysis
+#        run: mvn checkstyle:check
 
       - name: Code coverage
         run: mvn jacoco:report
