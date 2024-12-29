@@ -6,7 +6,7 @@
 - [x] Task 5 : Set a  CI workflow ( build, test, quality check, deploy, and Telemetry setup ) in the `.github/workflows/ci.yml` file
 - [ ] Task 6 : Test the workflow ( build, test, quality check, deploy, and Telemetry setup ) and check if it works as expected
 - [x] Task 7 : Fix the Checkstyle violations ( Missing package-info.java File for Javadoc && Javadoc comments Variables in GameState.java && Parameters in GridHelper.java Should Be Final && if Constructs in GridHelper.java Must Use Braces {})
-- [ ] Task 8 : Explain how to fix the Checkstyle violations in the `docs/CONTRIBUTOR.md` file
+- [x] Task 8 : Explain how to fix the Checkstyle violations in the `docs/CONTRIBUTOR.md` file
 
 
 

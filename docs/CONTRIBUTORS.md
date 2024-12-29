@@ -65,6 +65,43 @@ The CI pipeline is automatically triggered on the following events:
 8. **Deploy to server**: Deploys the application to a live environment.
 9. **Telemetry setup**: Sets up telemetry for monitoring.
 
+## Fixing Checkstyle Violations
+
+### Missing `package-info.java` File
+To fix the missing `package-info.java` file for Javadoc:
+1. Create a file named `package-info.java` in the `be.unamur.game2048.models` package.
+2. Add the following content to the file:
+   ```java
+   /**
+    * This package contains the model classes for the 2048 game.
+    */
+   package be.unamur.game2048.models;
+### Missing Javadoc Comments for Variables
+To fix missing Javadoc comments for variables in `GameState.java`:  
+Open the `GameState.java` file.
+Add Javadoc comments for each variable. For example:
+```
+/**
+* The game has just started.
+  */
+  start,
+ ```
+### Parameters in `GridHelper.java` Should Be Final
+To fix the parameters in `GridHelper.java` that should be `final`:
+Open the `GridHelper.java` file.
+Add the `final` keyword to the parameters that should be final. For example:
+```
+public static int[][] rotateGrid(int[][] grid, int times) {
+```
+### If Constructs in `GridHelper.java` Must Use Braces
+To fix the if constructs in `GridHelper.java` that must use braces:
+Open the `GridHelper.java` file.
+Add braces to the if constructs that are missing them. For example:
+```
+if {(grid[i][j] == 0)
+    grid[i][j] = 2; }
+```
+
 ### Deployment
 
 To deploy the application, the CI pipeline automatically copies the JAR file to the server and runs it. Ensure the server details and paths are correctly configured in the workflow file.
