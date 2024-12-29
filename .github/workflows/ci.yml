@@ -38,10 +38,13 @@ jobs:
 
       - name: Deploy to server
         run: |
-          scp target/2048-1.0-SNAPSHOT.jar user@yourserver:/path/to/deploy
-          ssh user@yourserver 'java -jar /path/to/deploy/game2048-1.0-SNAPSHOT.jar'
+            echo "Deploying to server..."
+# Add commands to deploy the application, e.g., using scp and ssh
+            # Example:
+#          scp target/2048-1.0-SNAPSHOT.jar user@yourserver:/path/to/deploy
+#          ssh user@yourserver 'java -jar /path/to/deploy/g2048-1.0-SNAPSHOT.jar'
 
       - name: Telemetry setup
         run: |
           echo "Setting up telemetry..."
-          # Add commands to set up telemetry, e.g., integrating with a monitoring tool
+# Add commands to set up telemetry, e.g., integrating with a monitoring tool
