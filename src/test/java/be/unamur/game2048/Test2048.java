@@ -375,8 +375,10 @@ public class Test2048 {
             }
         }
         gc.startGame(tiles);
-        boolean movesAvailable = gc.movesAvailable();
-        assertFalse(movesAvailable); 
+        Method method = GameController.class.getDeclaredMethod("movesAvailable");
+        method.setAccessible(true);
+        boolean result = (boolean) method.invoke(gc);
+        assertFalse(result); 
         assertEquals(GameState.over, gc.getGamestate());
     }
 
