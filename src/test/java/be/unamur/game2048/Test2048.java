@@ -371,11 +371,13 @@ public class Test2048 {
         Tile[][] tiles = new Tile[GameParams.sideLength][GameParams.sideLength];
         for (int i = 0; i < GameParams.sideLength; i++) {
             for (int j = 0; j < GameParams.sideLength; j++) {
-                tiles[i][j] = new Tile(2);
+                tiles[i][j] = new Tile((i + j) % 2 == 0 ? 2 : 4);
             }
         }
         gc.startGame(tiles);
-
+        boolean movesAvailable = gc.movesAvailable();
+        assertFalse(movesAvailable); 
         assertEquals(GameState.over, gc.getGamestate());
     }
+
 }
