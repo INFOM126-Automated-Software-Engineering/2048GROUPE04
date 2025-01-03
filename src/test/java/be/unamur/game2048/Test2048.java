@@ -6,6 +6,7 @@ import org.junit.Test;
 import be.unamur.game2048.controllers.*;
 import be.unamur.game2048.helpers.*;
 import be.unamur.game2048.models.*;
+import java.lang.reflect.Method;
 
 public class Test2048 {
 
