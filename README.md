@@ -1,4 +1,7 @@
-# 2048 Game
+# 2048 Game 
+
+## Nota Bene 
+The content of this repo has been moved to https://github.com/INFOM126-Automated-Software-Engineering/2048GROUPE04. Please check it for the final version of the assignment. We couldn't manage "issues" in this repo as we couldn't find the "settings" icon, possibly due to a bad fork. Therefore, we created another fork and migrated the content of this repo to continue handling issues. 
 
 ## Overview
 This repository contains the implementation of the 2048 game. The game is developed in Java and uses Maven for dependency management and build automation.
